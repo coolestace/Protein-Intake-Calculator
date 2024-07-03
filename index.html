@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Calculator</title>
+</head>
+<body>
+    <h1>Protein Calculator</h1>
+    <form id="protein-form">
+        <label for="weight">น้ำหนักตัว (กิโลกรัม):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+        
+        <label for="age">อายุ (ปี):</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="activity">ระดับกิจกรรมทางกาย:</label>
+        <select id="activity" name="activity">
+            <option value="low">ต่ำ</option>
+            <option value="medium">ปานกลาง</option>
+            <option value="high">สูง</option>
+        </select><br><br>
+        
+        <label for="goal">เป้าหมายการออกกำลังกาย:</label>
+        <select id="goal" name="goal">
+            <option value="maintain">รักษาน้ำหนัก</option>
+            <option value="gain">เพิ่มกล้ามเนื้อ</option>
+            <option value="lose">ลดน้ำหนัก</option>
+        </select><br><br>
+
+        <label for="meals">จำนวนมื้ออาหารต่อวัน:</label>
+        <input type="number" id="meals" name="meals" min="3" max="6" required><br><br>
+        
+        <button type="button" onclick="calculateProtein()">คำนวณ</button>
+    </form>
+    
+    <h2 id="result"></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
